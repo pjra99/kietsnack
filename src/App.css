@@ -1,0 +1,21 @@
+.signIn:hover {
+       font-size: 15px;
+       /* color: red; */
+}
+.listItem:hover {
+       background-color: #ffe05d ;
+       transition: 0.2s;;
+}
+.item:hover {
+       box-shadow: 8px 12px 12px #a6a9b6;
+       color:#153e90;
+       transition: .1s;
+}
+.cart:hover {
+       background-color: #f8f1f1;
+}
+.canteenCard:hover {
+       box-shadow: 8px 12px 12px #a6a9b6;
+       /* color:#153e90; */
+       transition: .1s;
+}
