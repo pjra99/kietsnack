@@ -41,7 +41,7 @@ class App extends React.Component {
            borderRadius: '2px'
         }
         return (
-            <div style={{
+            <div className="container-fluid" style={{
                 backgroundColor: 'rgb(255,196,60)',
                 height: '250vh',
                 padding: '40px',
@@ -52,37 +52,68 @@ class App extends React.Component {
                 borderRadius: '5px',
                 paddingBottom: '20px',
             }}>
-              <ul style={{marginRight: '20%', paddingTop:'20px'}}>
+                <div className="row">
+                <div className="col-md-6" style={{
+                    fontSize: '13px',
+                    fontFamily: 'Lato',
+                    color: '#838383',
+                }}>
+                <p style={{paddingTop: '10px'}}> <FaHamburger /> <FaUtensils />Welcome to KIET Foods! </p>
+                </div>
+                    <div className="col-md-6" style={{
+                        display: 'flex',
+                        float: 'right'
+                    }}>
+                    <ul style={{
+                         paddingTop:'20px'}}>
               <li className='listItem cart' style={{  listStyle: 'none',
            float: 'right',
-           marginRight: '-200px',
-           marginLeft: '100px',
            fontFamily: 'Vollkorn',
            padding: '4px',
-           borderRadius: '2px'}}> <RiShoppingBasketFill size={42}/>{this.state.total}</li>
+           borderRadius: '2px',
+           }}> <RiShoppingBasketFill size={42}/>{this.state.total}</li>
                   <li className='listItem' style={listItemStyle}>Contact Us </li>
                   <li className='listItem' style={listItemStyle} onClick={()=>ReactDOM.render(<Main />, document.getElementById('root'))}>
                       Sign Out
                       </li>
                   <li className='listItem' style={listItemStyle}>Home</li>
               </ul>
-                <div className="container-header-upper" style={{
-                    fontSize: '13px',
-                    fontFamily: 'Lato',
-                    color: '#838383',
-                    margin: '0px 0px 0px 50px'
-                }}>
-                <p style={{paddingTop: '10px'}}> <FaHamburger /> <FaUtensils />Welcome to KIET Foods! </p>
+                    </div>
                 </div>
-                <div className="container-header-lower">
+                <div className="row container-header-lower">
+                    <div className="col-lg-6" style={{
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}>
                 <p style={{
-                    margin: '50px 0px 0px 80px',
+                    // margin: '50px 0px 0px 80px',
                     fontSize: '36px',
                     fontFamily: 'Dosis',
                     paddingBottom: '-300px',
                     width: '400px'
-                }}>It's all about your favourite < br />taste at favourite price!</p>
-                 <input type="text" placeholder="What would you like to eat?" class='search'
+                }}>It's all about your favourite < br />taste at favourite price!
+                </p>
+                            </div>
+                                <div className="col-md-3" style={{
+                                    // marginRight: '12%'
+                                }}> <img src={samosa} style={{
+                                    width: '180px',
+                                    height: '180px',
+                                    borderRadius: '10%',
+                                }} /> </div>
+                                <div className="col-md-3"><img src={dosa}  style={{
+                                            width: '180px',
+                                            height: '180px',
+                                            borderRadius: '10%',
+                                }} /> </div>                        
+                            </div>
+                            <div className="row" >
+                                <div className="col-md-6">
+                                    <div className="row" style={{
+                                        // display: 'flex',
+                                        // justifyContent: 'center'
+                                    }}>
+                                    <input type="text" placeholder="What would you like to eat?" class='search'
                         style={{
                         // float: 'right',
                         marginLeft: '100px',
@@ -92,7 +123,8 @@ class App extends React.Component {
                         width: '220px',
                         height: '35px',
                         borderRadius : '10px'
-                        }}/> <button style={{
+                        }}/> 
+                        <button style={{
                             backgroundColor: 'rgb(255,196,60)',
                             border: 'none',
                             borderRadius: '3px',
@@ -101,7 +133,9 @@ class App extends React.Component {
                             fontFamily: 'Nunito',
 
                             }}> Go </button>
-                            <p style={{
+                                    </div>
+                                    {/* <div className="row"> */}
+  <div className="row"><p style={{
                                 margin: '15px 0px 0px 100px',
                                 fontFamily: 'Lato',
                                 color: '#838383',
@@ -120,19 +154,44 @@ class App extends React.Component {
                                  Learn more
                                  </button>
                                  </p>
-                            <FoodCircles/>
                             <h2 align='center' style={{
                                 margin: '30px 0px -60px 0px',
                                 fontFamily: 'Noto Sans TC',
                                 color: '#838383',
                             }}>What is your mood Today?</h2>
                             <CategoryBox />
-                </div>
-               <div className="main">
+                             </div>
+                                    {/* </div> */}
+
+                            
+                                </div>
+                          
+                            <div className="col-lg-6" style={{
+                                marginTop: '4%',
+                                // marginRight: '5%'
+                            }}>   
+                           <div className="col-md-3" style={{
+                               marginRight: '29%',
+                               marginLeft: '-3%'
+                           }}>  <img src={momos} style={{
+                            width: '180px',
+                            height: '180px',
+                            borderRadius: '10%',
+                           }}/></div>
+                                <div className="col-md-3"><img src={noodles}  style={{
+                                            width: '180px',
+                                            height: '180px',
+                                            borderRadius: '10%',
+                                            // marginLeft: '30%'
+                                }} /> 
+                                </div>
+                                </div>
+                            </div>
+               <div className="row main">
 <h1 style={{
-float: 'left',
-marginTop: '70px',
-marginLeft: '-60px',
+display: 'flex',
+justifyContent: 'center',
+verticalAlign: 'center',
 fontFamily: 'Vollkorn',
 color: '#333333'
 }}>
@@ -206,32 +265,6 @@ color: '#333333'
     }
 }
 
-function FoodCircles(){
-    const tileStyle1 = {
-        width: '180px',
-        height: '180px',
-        borderRadius: '10%',
-        margin: '-350px 50px 0px 0px',
-        paddingBottom: '100px',
-    }
-    const tileStyle2 = {
-        width: '180px',
-        height: '180px',
-        borderRadius: '10%',
-        margin: '-100px 50px 0px 0px',
-        paddingTop: '50px'
-    }
-return (
-    <div style={{float: 'right', marginRight: '100px'}}>
-         <img src={samosa} style={tileStyle1} />
-         <img src={dosa}  style={tileStyle1} /> <br />
-         <img src={momos} style={tileStyle2} />
-         <img src={noodles}   style={tileStyle2} />
-    </div>
-   
-)
-}
-
 function CategoryBox(){
     const cellStyle = {
         float: 'left',
@@ -240,13 +273,16 @@ function CategoryBox(){
         paddingTop: '10px',
         borderBottomLeftRadius: '5px',
         borderBottomRightRadius: '5px',
+        paddingBottom: '-20px'
     }
     const pStyle = {
         backgroundColor: 'rgb(255,196,60)',
+        // paddingBottom: '10px',
         width: '70px',
         borderBottomLeftRadius: '5px',
         borderBottomRightRadius: '5px',
         fontFamily: 'Lato',
+        marginBottom: '-10px'
     }
     return(
         <div class='categoryboxes' style={{margin: '100px 0px 0px 0px'}}>
@@ -276,7 +312,9 @@ function CanteenCard(props){
     fontFamily: 'Lato',
     fontSize: '32px',
     borderBottomLeftRadius: '10px',
-    borderBottomRightRadius: '10px'
+    borderBottomRightRadius: '10px',
+    // paddingBottom: '10px'
+    marginBottom: '-10px'
 }}>{props.canteen}</p>
         </div>
     )
