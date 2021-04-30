@@ -1,3 +1,7 @@
+.container-fluid {
+    background-color: #eeeeee;
+    /* padding: 0px; */
+}
 .row1 {
     background-color: rgb(255,196,60);
     font-family: "Fredoka One", sans-serif;
@@ -77,7 +81,7 @@
     opacity: .8;
     text-align: center;
 }
-.img1, .img3 {
+.img1, .img3{
 display: flex;
 justify-content: center;
 }
