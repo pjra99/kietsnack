@@ -1,10 +1,12 @@
 .container-fluid {
     background-color: #eeeeee;
-    /* padding: 0px; */
+    padding: 0px;
 }
 .row1 {
     background-color: rgb(255,196,60);
     font-family: "Fredoka One", sans-serif;
+    /* padding-top: -3em;
+    padding-left: -3em; */
 }
 .heading-title {
     font-size: 40px;
@@ -35,6 +37,7 @@
     margin-right: 70px;
     font-family: 'Vollkorn';
     color: #252525;
+    padding: 1em;
 }
 .search {
     border: none;
@@ -71,6 +74,7 @@
 .bottom-upper-phrase {
     text-align: center;
     font-family: 'Vollkorn';
+    padding: 1em;
 }
 .bottom-lower {
     height: 100px;
