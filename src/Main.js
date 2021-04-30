@@ -49,7 +49,7 @@ class Main extends React.Component {
                Get your favourite canteen food <br />delivered at your hostel! <br />
                     </div>
                       <div className="row"> 
-                      <div className="col-md-5"></div>
+                      <div className="col-md-4"></div>
                       <div className="col-md-5">
                       <input type="text" placeholder="What would you like to eat?" className='search' />
                       <button className="search-button"
@@ -58,7 +58,7 @@ class Main extends React.Component {
                         </button>
                       
                         </div>
-                      <div className="col-md-4"></div>
+                      <div className="col-md-3"></div>
                         </div> 
                         <div className="row buttons">    
                         <div className="col-sm-3"></div>    
@@ -73,7 +73,7 @@ class Main extends React.Component {
                             Sign in as Administrator <RiAdminLine />
                         </button>
                         </div> 
-                        <div className="col-sm-2"></div>    
+                        <div className="col-sm-3"></div>    
 
                         </div>
                 </div>
