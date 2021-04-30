@@ -1,0 +1,83 @@
+.row1 {
+    background-color: rgb(255,196,60);
+    font-family: "Fredoka One", sans-serif;
+}
+.heading-title {
+    font-size: 40px;
+    margin-left: 2%;
+}
+.heading-lower {
+    background-color: rgb(255,196,60);
+    padding: 0 2% 2% 2%;
+    font-family: "Fredoka One";
+}
+.list {
+    display: inline;
+    margin-right: 30px;
+}
+.heading-lower-phrase {
+    font-size: 20px;
+}
+.header-list {
+    float: right;
+}
+.row2 {
+    background-color: rgb(255,196,60); 
+    padding-bottom: 10px;
+}
+.header-center-title {
+    float: right;
+    font-size: 30px;
+    margin-right: 70px;
+    font-family: 'Vollkorn';
+    color: #252525;
+}
+.search {
+    border: none;
+    background-color: #efecec;
+    width: 220px;
+    height: 35px;
+    border-radius : 40px;
+}
+.search-button {
+    border: none;
+    background: none;
+}
+.buttons {
+    padding-top: 5%;
+}
+.signInStu {
+    padding: 10px; 
+    width: 200px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Pragati Narrow';
+    box-shadow: 8px 10px 10px #f89d13;
+    font-family: 'Lato';
+}
+.signInAdm {
+    padding: 10px;
+    width: 200px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Pragati Narrow';
+    box-shadow: 8px 10px 10px #f89d13;
+    font-family: 'Lato';
+}
+.bottom-upper-phrase {
+    text-align: center;
+    font-family: 'Vollkorn';
+}
+.bottom-lower {
+    height: 100px;
+    background-color: #eeeeee;
+}
+.bottom-lower-phrase {
+    padding-top: 40px;
+    opacity: .8;
+    text-align: center;
+}
+.img1, .img3 {
+display: flex;
+justify-content: center;
+}
