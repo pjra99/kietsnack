@@ -125,13 +125,7 @@ class App extends React.Component {
                             </div>
                <div className="row main">
 <div className="row">
-<h1 style={{
-display: 'flex',
-justifyContent: 'center',
-verticalAlign: 'center',
-fontFamily: 'Vollkorn',
-color: '#333333'
-}}>
+<h1 className="item-card-section-title">
     Most ordered Ones!</h1>
 </div>
 <div className="row item-card-section">
