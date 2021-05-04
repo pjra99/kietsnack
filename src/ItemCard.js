@@ -1,26 +1,21 @@
 import React from 'react'
-import maggie from './images/maggie.jpeg'
-import masaladosa from './images/dosa2.jpeg'
-import momos from './images/momos2.jpeg'
-import patties from './images/patties.jpg'
 
-class ItemCard extends React.Component {
+function ItemCard(props){
 
-    render(){
         const imgStyle = 
             {
-                width: '200px',
+                width: '100%',
                 height: '200px',
                 borderTopRightRadius: '10px',
                 borderTopLeftwRadius: '10px'
               }
         const spanStyle = {
-            float: 'left',
-           marginRight: '50px',
+            width: '200px',
            backgroundColor: 'rbg(255, 255,255)',
            fontFamily: 'Lato',
            borderRadius: '10px',
-           boxShadow: '6px 12px 12px 1px #c1c1c1'
+           boxShadow: '6px 12px 12px 1px #c1c1c1',
+           padding: '0px'
         }
         const pStyle = {
             marginLeft: '2%'
@@ -29,47 +24,19 @@ class ItemCard extends React.Component {
             color: '#54e346'
         }
         return (
-            <div className= 'itemCard' style={{
-                float: 'right',
-                margin: '50px 70px 0px 0px',
-            }}>
-              <span style={spanStyle} >
-                  <img style={imgStyle} src={maggie} /> 
+          
+              <div className="col-md-3" style={spanStyle} >
+                  <img style={imgStyle} src={props.img} /> 
                   <p style={pStyle}>Maggie 
                       <ul>
-                          <li> Heroes</li>
+                          <li> {props.name}</li>
                           <li style={listStyle}><NumberOfItems price={25}/></li>
                           </ul>
                           </p>
-              </span>
-              <span style={spanStyle}>
-                  <img style={imgStyle} src={masaladosa} /> 
-              <p style={pStyle}> Masala Dosa <ul>
-                  <li>Cafeteria</li>
-                  <li style={listStyle}><NumberOfItems price={35} /></li>
-                  </ul>
-                  </p>
-                  </span>
-              <span style={spanStyle}><img style={imgStyle} src={momos} /> 
-              <p style={pStyle}> Momos
-                   <ul>
-                  <li>Amul</li>
-                  <li style={listStyle}> <NumberOfItems price={20}/></li>
-                  </ul>
-                  </p>
-              </span>
-              <span style={spanStyle}><img style={imgStyle} src={patties} />
-              <p style={pStyle}>Patties 
-                  <ul>
-                <li> Big Treat</li>
-                <li style={listStyle}><NumberOfItems price={20} /></li>
-                </ul>
-                </p> 
-                </span>
-            </div>
+              </div>
         )
     }
-}
+
 class NumberOfItems extends React.Component {
     constructor(props){
         super(props);
