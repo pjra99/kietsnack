@@ -72,7 +72,12 @@
        font-family: 'Noto Sans TC';
        color: #838383;
 }
-
+.item-card-section-title {
+       margin: 5% 5%;
+font-family: 'Vollkorn';
+color: #333333;
+text-align: center;
+}
 .item-card-section {
    padding-left: 5%;
 }
