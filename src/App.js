@@ -19,6 +19,10 @@ import heroes from "./images/slide_4.jpg"
 import amul from "./images/slide_5.jpg"
 import CanteenMenu from './CanteenMenu.js'
 import patties from './images/patties.jpg'
+import maggie from './images/maggie.jpeg'
+import masaladosa from './images/dosa2.jpeg'
+// import momos from './images/momos2.jpeg'
+// import patties from './images/patties.jpg'
 
 class App extends React.Component {
     constructor(props){
@@ -43,34 +47,16 @@ class App extends React.Component {
         return (
             <div className="container-fluid" style={{
                 backgroundColor: 'rgb(255,196,60)',
-                height: '250vh',
                 padding: '40px',
             }}>
-            <div className="container" style={{
-                height: '245vh',
-                backgroundColor: 'rgb(250, 250, 250)',
-                borderRadius: '5px',
-                paddingBottom: '20px',
-            }}>
+            <div className="container">
                 <div className="row">
-                <div className="col-md-6" style={{
-                    fontSize: '13px',
-                    fontFamily: 'Lato',
-                    color: '#838383',
-                }}>
-                <p style={{paddingTop: '10px'}}> <FaHamburger /> <FaUtensils />Welcome to KIET Foods! </p>
+                <div className="col-md-6 header-title">
+                <p> <FaHamburger /> <FaUtensils />Welcome to KIET Foods! </p>
                 </div>
-                    <div className="col-md-6" style={{
-                        display: 'flex',
-                        float: 'right'
-                    }}>
-                    <ul style={{
-                         paddingTop:'20px'}}>
-              <li className='listItem cart' style={{  listStyle: 'none',
-           float: 'right',
-           fontFamily: 'Vollkorn',
-           padding: '4px',
-           borderRadius: '2px',
+                    <div className="col-md-6 header-list">
+                    <ul>
+              <li className='listItem cart' style={{  
            }}> <RiShoppingBasketFill size={42}/>{this.state.total}</li>
                   <li className='listItem' style={listItemStyle}>Contact Us </li>
                   <li className='listItem' style={listItemStyle} onClick={()=>ReactDOM.render(<Main />, document.getElementById('root'))}>
@@ -80,114 +66,65 @@ class App extends React.Component {
               </ul>
                     </div>
                 </div>
-                <div className="row container-header-lower">
-                    <div className="col-lg-6" style={{
-                        display: 'flex',
-                        justifyContent: 'center'
-                    }}>
-                <p style={{
-                    // margin: '50px 0px 0px 80px',
-                    fontSize: '36px',
-                    fontFamily: 'Dosis',
-                    paddingBottom: '-300px',
-                    width: '400px'
-                }}>It's all about your favourite < br />taste at favourite price!
-                </p>
-                            </div>
-                                <div className="col-md-3" style={{
-                                    // marginRight: '12%'
-                                }}> <img src={samosa} style={{
-                                    width: '180px',
-                                    height: '180px',
-                                    borderRadius: '10%',
-                                }} /> </div>
-                                <div className="col-md-3"><img src={dosa}  style={{
-                                            width: '180px',
-                                            height: '180px',
-                                            borderRadius: '10%',
-                                }} /> </div>                        
-                            </div>
-                            <div className="row" >
-                                <div className="col-md-6">
-                                    <div className="row" style={{
-                                        // display: 'flex',
-                                        // justifyContent: 'center'
-                                    }}>
-                                    <input type="text" placeholder="What would you like to eat?" class='search'
-                        style={{
-                        // float: 'right',
-                        marginLeft: '100px',
-                        marginTop: '50px',
-                        border: 'none',
-                        backgroundColor: '#efecec',
-                        width: '220px',
-                        height: '35px',
-                        borderRadius : '10px'
-                        }}/> 
-                        <button style={{
-                            backgroundColor: 'rgb(255,196,60)',
-                            border: 'none',
-                            borderRadius: '3px',
-                            height: '35px',
-                            width:'50px',
-                            fontFamily: 'Nunito',
+                <div className="row">
+                    <div className="col-lg-6 upper-left-column">
+               
+                <div className="row "> 
+                <div className="col-md-2"></div>
+               
+                <div className="col-md-10 main-title"> <p>It's all about your favourite < br />taste at favourite price!
+                </p></div>
+               
+                </div>
+                <div className="row" >
+                                        <div className="col-md-2">
 
-                            }}> Go </button>
+                                        </div>
+                                        <div className="col-md-10 input-section">
+                                        <input type="text" className="input" placeholder="What would you like to eat?" class='search' /> 
+                        <button  className="search-button"> Go </button>
+                                        </div>
                                     </div>
-                                    {/* <div className="row"> */}
-  <div className="row"><p style={{
-                                margin: '15px 0px 0px 100px',
-                                fontFamily: 'Lato',
-                                color: '#838383',
-                                fontFamily: 'Nunito',
-                                fontSize: '13px'
-                            }}> Order below 100/- include additional <br /> delivery charges..<br />
-                             <button style={{
-                                  backgroundColor: 'rgb(255,196,60)',
-                                  border: 'none',
-                                  borderRadius: '3px',
-                                  height: '35px',
-                                  width:'100',
-                                  fontFamily: 'Nunito',
-                                  marginTop: '10px'
-                             }}>
+                                    <div className="row">
+                                        <div className="col-md-11">
+                                        <p className="text-below-input"> 
+                        Order below 100/- include additional <br /> delivery charges..<br />
+                             <button className="more-button">
                                  Learn more
                                  </button>
                                  </p>
-                            <h2 align='center' style={{
-                                margin: '30px 0px -60px 0px',
-                                fontFamily: 'Noto Sans TC',
-                                color: '#838383',
-                            }}>What is your mood Today?</h2>
+                                        </div>
+                             </div>  
+                             <div className="row">
+                             <h2 align='center' className="second-title" >What is your mood Today?</h2>
                             <CategoryBox />
                              </div>
-                                    {/* </div> */}
-
+                            </div>
+                            <div className="col-md-6 upper-left-column">
+                            <div className="row left-col-row0" style={{
+                                    height: '1em'
+                                }}>
                             
                                 </div>
-                          
-                            <div className="col-lg-6" style={{
-                                marginTop: '4%',
-                                // marginRight: '5%'
-                            }}>   
-                           <div className="col-md-3" style={{
-                               marginRight: '29%',
-                               marginLeft: '-3%'
-                           }}>  <img src={momos} style={{
-                            width: '180px',
-                            height: '180px',
-                            borderRadius: '10%',
-                           }}/></div>
-                                <div className="col-md-3"><img src={noodles}  style={{
-                                            width: '180px',
-                                            height: '180px',
-                                            borderRadius: '10%',
-                                            // marginLeft: '30%'
-                                }} /> 
+                                <div className="row left-col-row1">
+                                <div className="col-md-6 img1"> <img src={samosa} /> </div>
+                                <div className="col-md-6 img2"><img src={dosa} /> </div>  
                                 </div>
+                                <div className="row left-col-row2" style={{
+                                    height: '1em'
+                                }}>
+                            
                                 </div>
+                                <div className="row left-col-row3">
+                                <div className="col-md-6 img1"> <img src={momos} /> </div>
+                                <div className="col-md-6 img2"><img src={noodles} /> </div>  
+                                </div>
+                           
+                            </div>
+                                       
                             </div>
                <div className="row main">
+<div className="row">
 <h1 style={{
 display: 'flex',
 justifyContent: 'center',
@@ -196,17 +133,17 @@ fontFamily: 'Vollkorn',
 color: '#333333'
 }}>
     Most ordered Ones!</h1>
-  <ItemCard total = {this.state.total} />
+</div>
+<div className="row item-card-section">
+<ItemCard total = {this.state.total} img={maggie} name="Heroes" />
+<ItemCard total = {this.state.total} img={masaladosa} name="Cafeteria" />
+<ItemCard total = {this.state.total} img={momos} name="Amul" />
+<ItemCard total = {this.state.total} img={patties} name="Big Treat" />
+</div>
+
 
      <div>
-         <h2 style={{
-               float: 'right',
-               width: '100%',
-               marginTop: '6%',
-               fontFamily: 'Noto Sans TC',
-            color: '#333333',
-            opacity: '.8'
-         }} align='center'> Order From your favourite Spots!</h2>
+         <h2  className="bottom-section-title"> Order From your favourite Spots!</h2>
        <div onClick={()=>ReactDOM.render(<CanteenMenu
         name = "Heroes"
         item1 = "Maggie" img1="https://i.pinimg.com/564x/74/a0/48/74a04839fca353e15ff7c935b67434e2.jpg" price1={25}
@@ -277,7 +214,6 @@ function CategoryBox(){
     }
     const pStyle = {
         backgroundColor: 'rgb(255,196,60)',
-        // paddingBottom: '10px',
         width: '70px',
         borderBottomLeftRadius: '5px',
         borderBottomRightRadius: '5px',
@@ -313,7 +249,6 @@ function CanteenCard(props){
     fontSize: '32px',
     borderBottomLeftRadius: '10px',
     borderBottomRightRadius: '10px',
-    // paddingBottom: '10px'
     marginBottom: '-10px'
 }}>{props.canteen}</p>
         </div>
