@@ -21,29 +21,20 @@ import CanteenMenu from './CanteenMenu.js'
 import patties from './images/patties.jpg'
 import maggie from './images/maggie.jpeg'
 import masaladosa from './images/dosa2.jpeg'
-// import momos from './images/momos2.jpeg'
-// import patties from './images/patties.jpg'
+
 
 class App extends React.Component {
     constructor(props){
         super(props);
         this.state = {
             total: 0
-        }
-
+        }   
     }
     handleCanteenCard(){
         console.log('Hi!')
     }
     render(){
-        const listItemStyle = {
-           listStyle: 'none',
-           float: 'right',
-           marginRight: '50px',
-           fontFamily: 'Vollkorn',
-           padding: '4px',
-           borderRadius: '2px'
-        }
+   
         return (
             <div className="container-fluid" style={{
                 backgroundColor: 'rgb(255,196,60)',
@@ -58,11 +49,11 @@ class App extends React.Component {
                     <ul>
               <li className='listItem cart' style={{  
            }}> <RiShoppingBasketFill size={42}/>{this.state.total}</li>
-                  <li className='listItem' style={listItemStyle}>Contact Us </li>
-                  <li className='listItem' style={listItemStyle} onClick={()=>ReactDOM.render(<Main />, document.getElementById('root'))}>
+                  <li className='listItem'>Contact Us </li>
+                  <li className='listItem' onClick={()=>ReactDOM.render(<Main />, document.getElementById('root'))}>
                       Sign Out
                       </li>
-                  <li className='listItem' style={listItemStyle}>Home</li>
+                  <li className='listItem'>Home</li>
               </ul>
                     </div>
                 </div>
@@ -81,8 +72,8 @@ class App extends React.Component {
 
                                         </div>
                                         <div className="col-md-10 input-section">
-                                        <input type="text" className="input" placeholder="What would you like to eat?" class='search' /> 
-                        <button  className="search-button"> Go </button>
+                                        <input type="text" className="input" placeholder="What would you like to eat?" /> 
+                        <button className="search-button"> Go </button>
                                         </div>
                                     </div>
                                     <div className="row">
