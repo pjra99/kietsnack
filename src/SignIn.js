@@ -1,17 +1,10 @@
 import React from "react"
-import ReactDOM from "react-dom"
-import Main from "./Main.js"
-import App from "./App.js"
 import {IoMdArrowRoundBack} from 'react-icons/io'
+import {Link} from "react-router-dom"
 
 class SignIn extends React.Component {
   render() {
-    function handleBackButton() {
-ReactDOM.render(<Main />, document.getElementById('root'))
-    }
-    function handleGetOTP(){
-      ReactDOM.render(<EnterOTP />, document.getElementById('root'))
-    }
+
       return (
           <div>
           <div className="header" style={{
@@ -19,17 +12,20 @@ ReactDOM.render(<Main />, document.getElementById('root'))
             height: '100px',
             fontFamily: 'Vollkorn'
         }}>
-           <h3 align='center'style={{paddingTop:'35px'}}><button style={{
+           <h3 align='center'style={{paddingTop:'35px'}}>
+             <Link to="/">
+             <button style={{
              marginRight:'10px',
              border: 'none',
              borderRadius:'2px'
-          }} onClick={handleBackButton}> <IoMdArrowRoundBack /></button> Just enter your number and get the OTP to Sign in! </h3> <br />
+          }} > <IoMdArrowRoundBack /></button> </Link>Just enter your number and get the OTP to Sign in! </h3> <br />
           <input type='text' placeholder='+91' style={{
             marginLeft: '43%',
             borderRadius: '5px',
             border:'1px solid black',
             height: '20px',
-          }} /> <button style={{
+          }} /> 
+          <Link to="/enterotp"><button style={{
                                   backgroundColor: '#0779e4',
                                   color: 'white',
                                   border: 'none',
@@ -37,8 +33,7 @@ ReactDOM.render(<Main />, document.getElementById('root'))
                                   height: '25px',
                                   width:'100',
                                   fontFamily: 'Nunito'
-          }}
-          onClick={handleGetOTP}>Go</button>
+          }}> Go</button> </Link>
           </div>
           <div className="main" style={{
             margin:'15% 0% 0% 0%',
@@ -54,12 +49,6 @@ ReactDOM.render(<Main />, document.getElementById('root'))
 
 class EnterOTP extends React.Component {
   render() {
-    function handleBackButton() {
-ReactDOM.render(<Main />, document.getElementById('root'))
-    }
-    function handleSignIn(){
-        ReactDOM.render(<App />, document.getElementById('root'))
-    }
       return (
           <div>
           <div align='center' className="header" style={{
@@ -67,17 +56,21 @@ ReactDOM.render(<Main />, document.getElementById('root'))
             height: '100px',
             fontFamily: 'Vollkorn'
         }}>
-           <h3 align='center' style={{padding:'35px 0px 0px 0px'}}><button style={{
+           <h3 align='center' style={{padding:'35px 0px 0px 0px'}}>
+             <Link to="/signin">
+             <button style={{
              marginRight:'10px',
              border: 'none',
              borderRadius:'2px'
-          }} onClick={handleBackButton}> <IoMdArrowRoundBack /></button> Enter the OTP Recieved! </h3> <br />
+          }} > <IoMdArrowRoundBack /></button> 
+          </Link>
+          Enter the OTP Recieved! </h3> <br />
           <input type='text' placeholder='XXXX' style={{
-            // marginLeft: '43%',
             borderRadius: '5px',
             border:'1px solid black',
             height: '20px'
-          }} /> <button style={{
+          }} /> 
+          <Link to="/afterLogin"><button style={{
             backgroundColor: '#0779e4',
             color: 'white',
                                   border: 'none',
@@ -85,7 +78,7 @@ ReactDOM.render(<Main />, document.getElementById('root'))
                                   height: '25px',
                                   width:'100',
                                   fontFamily: 'Nunito',
-          }}onClick={handleSignIn}>Go</button>
+          }}>Go</button></Link>
           </div>
           <div className="main" style={{
            margin:'15% 0% 0% 0%',
@@ -99,4 +92,4 @@ ReactDOM.render(<Main />, document.getElementById('root'))
   }
 }
 
-export default SignIn
+export {SignIn, EnterOTP}

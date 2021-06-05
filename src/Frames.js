@@ -11,8 +11,8 @@ function Frames () {
     return (
       <div className="slide-container" style={{
         //   backgroundColor: '#ffc85c',
-          width: '550px',
-          marginLeft: '10px'
+          // width: '50%',
+          // marginLeft: '10px'
       }}>
         <Slide >
         <div className="each-slide">

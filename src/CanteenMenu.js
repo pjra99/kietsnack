@@ -1,15 +1,14 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import App from './App.js'
 import {IoMdArrowRoundBack} from 'react-icons/io'
+import {Link, useHistory} from "react-router-dom"
 
-function CanteenMenu (props) {
+function CanteenMenu () {
+    const history = useHistory();
     const listStyle = {
             float: 'left',
             listStyle: 'none',
             border: 'none',
             marginLeft: '5%',
-            // marginLeft:'20%'
             boxShadow: '8px 12px 12px #bbbbbb'
     }
     const imgStyle = {
@@ -29,49 +28,49 @@ color: '#54e346',
 fontFamily: 'Lato'
 }
     return (
-        <div className="container" style={{
+        <div className="canteen-menu-screen container-fluid" style={{
             height: '100vh',
             padding: '40px',
             backgroundColor: 'rgb(255,196,60)',
         }}>
-             <div className="main" style={{
+             <div className="canteen-menu-container container" style={{
                  height: '100vh',
                  backgroundColor: 'white',
                  borderRadius: '5px'
              }}>
+                 <Link to="/afterlogin">
                  <button style={{
                  border: 'none',
                  fontSize: '20px'
                 }} 
-                 onClick = {()=> ReactDOM.render(<App />, document.getElementById('root'))}><IoMdArrowRoundBack /></button>
-            <h1 align='center'>{props.name}</h1>
+   ><IoMdArrowRoundBack /></button></Link>
+            <h1 align='center'>{history.location.state.name}</h1>
             <br />
             <br />  
             <ul>
                 <li style={listStyle}>
                     <img style = {imgStyle} 
-                    src={props.img1} />
-                    <p style={pStyle}>{props.item1} <p style={priceStyle}><NumberOfItems price={props.price1} /></p> </p>
+                    src={history.location.state.img1} />
+                    <p style={pStyle}>{history.location.state.item1} <p style={priceStyle}><NumberOfItems price={history.location.state.price1} /></p> </p>
                 </li>
                 <li style={listStyle}>
                 <img style = {imgStyle} 
-                    src={props.img2} />
-                   <p style={pStyle}> {props.item2} <p style={priceStyle}><NumberOfItems price={props.price2} /></p> </p>
+                    src={history.location.state.img2} />
+                   <p style={pStyle}> {history.location.state.item2} <p style={priceStyle}><NumberOfItems price={history.location.state.price2} /></p> </p>
                 </li>
                 <li style={listStyle}>
                 <img style = {imgStyle} 
-                    src={props.img3} />
-                   <p style={pStyle}> {props.item3} <p style={priceStyle}><NumberOfItems price={props.price3} /></p></p>
+                    src={history.location.state.img3} />
+                   <p style={pStyle}> {history.location.state.item3} <p style={priceStyle}><NumberOfItems price={history.location.state.price3} /></p></p>
                 </li>
                 <li style={listStyle}>
                 <img style = {imgStyle} 
-                    src={props.img4} />
-                   <p style={pStyle}>{props.item4} <p style={priceStyle}><NumberOfItems price={props.price4} /></p></p>
+                    src={history.location.state.img4} />
+                   <p style={pStyle}>{history.location.state.item4} <p style={priceStyle}><NumberOfItems price={history.location.state.price4} /></p></p>
                 </li>
             </ul>
         </div>
         </div>
-      
     )
 }
 class NumberOfItems extends React.Component {
@@ -108,10 +107,8 @@ class NumberOfItems extends React.Component {
       }
     }
     render(){
-
 return (
    <span style={{
-    //    border: '1px solid black',
        color: 'b',
        borderRadius: '5px'
    }}> {this.state.total} Rs <button onClick={this.handleRemoveItem} style={{
@@ -122,14 +119,16 @@ return (
     marginLeft: '10px',
     borderBottomLeftRadius: '5px',
     borderTopLeftRadius: '5px',
-}}>-</button><span style={{color: 'black', marginLeft: '3px'}}>{this.state.item} </span> <button onClick={this.handleAddItem} style={{
+}}>-</button>
+<span style={{color: 'black', marginLeft: '3px'}}>{this.state.item} </span> <button onClick={this.handleAddItem} style={{
     border: 'none',
     backgroundColor: 'rgb(255,196,60)',
     paddingTop: '3.5px',
     paddingBottom: '4px',
     borderTopRightRadius: '5px',
     borderBottomRightRadius: '5px',
-}}>+</button></span>
+}}>+</button>
+</span>
 )
 }
 }

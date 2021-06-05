@@ -8,7 +8,8 @@ function Canteens (props) {
         height: '250px',
     margin: '3% 0% 3% 13%',
     borderRadius: '10px',
-    boxShadow: '8px 12px 12px grey'
+    boxShadow: '8px 12px 12px grey',
+    // marginBottom: '-20px'
         }}/>
     )
 }

@@ -5,6 +5,7 @@ const INITIAL_STATE = {
     cart: [],
     currentItem: 0
 }
+
 const shopReducer = (state=INITIAL_STATE, action) => {
 switch (actionTypes){
         case actionTypes.ADD_TO_CART:  return {};
