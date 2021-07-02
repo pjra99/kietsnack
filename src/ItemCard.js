@@ -27,12 +27,12 @@ function ItemCard(props){
           
               <div className="col-md-3" style={spanStyle} >
                   <img style={imgStyle} src={props.img} alt="some food item" /> 
-                  <p style={pStyle}>Maggie 
+                  <div style={pStyle}>Maggie 
                       <ul>
                           <li> {props.name}</li>
                           <li style={listStyle}><NumberOfItems price={25}/></li>
                           </ul>
-                          </p>
+                          </div>
               </div>
         )
     }

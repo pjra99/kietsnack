@@ -1,6 +1,7 @@
 import React from "react"
 import {IoMdArrowRoundBack} from 'react-icons/io'
 import {Link} from "react-router-dom"
+import './SignIn.css'
 
 class SignIn extends React.Component {
   render() {
@@ -19,7 +20,7 @@ class SignIn extends React.Component {
              border: 'none',
              borderRadius:'2px'
           }} > <IoMdArrowRoundBack /></button> </Link>Just enter your number and get the OTP to Sign in! </h3> <br />
-          <input type='text' placeholder='+91' style={{
+          <input type='text' className="ph-input" placeholder='+91' style={{
             marginLeft: '43%',
             borderRadius: '5px',
             border:'1px solid black',

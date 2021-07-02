@@ -1,0 +1,8 @@
+@media only screen and (max-width: 991px){
+    .header {
+        padding-bottom: 50%;
+    }
+    .ph-input {
+        margin-right:100px;
+    }
+}

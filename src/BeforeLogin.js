@@ -17,7 +17,7 @@ class BeforeLogin extends React.Component {
 
      render(){
          return (
-            <div class="before-login-screen container-fluid"> 
+            <div className="before-login-screen container-fluid"> 
                 <div className="row row1">
                 <div className="col-md-4 heading-title">KIET Foods! <FaHamburger /> <FaUtensils />
                 </div> 

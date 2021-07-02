@@ -241,11 +241,11 @@ function CategoryBox(){
         marginBottom: '-10px'
     }
     return(
-        <div class='categoryboxes' style={{margin: '100px 0px 0px 0px'}}>
-     <span class='item' align='center' style={cellStyle}><GiPizzaSlice size={42}/><p align='center' style={pStyle}>Fast Food</p></span>
-     <span class='item' align='center' style={cellStyle}><GiChipsBag size={42}/><p align='center' style={pStyle}>Packed <br/>Snacks</p></span>
-     <span class='item' align='center' style={cellStyle}><GiNoodles size={42}/><p align='center'  style={pStyle}>Noodles</p></span>
-     <span class='item' align='center' style={cellStyle}><BiCoffeeTogo size={42}/><p align='center' style={pStyle}>Drinks</p></span>
+        <div className='categoryboxes' style={{margin: '100px 0px 0px 0px'}}>
+     <span className='item' align='center' style={cellStyle}><GiPizzaSlice size={42}/><p align='center' style={pStyle}>Fast Food</p></span>
+     <span className='item' align='center' style={cellStyle}><GiChipsBag size={42}/><p align='center' style={pStyle}>Packed <br/>Snacks</p></span>
+     <span className='item' align='center' style={cellStyle}><GiNoodles size={42}/><p align='center'  style={pStyle}>Noodles</p></span>
+     <span className='item' align='center' style={cellStyle}><BiCoffeeTogo size={42}/><p align='center' style={pStyle}>Drinks</p></span>
         </div>
     )
 }
