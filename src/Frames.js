@@ -16,22 +16,22 @@ function Frames () {
       }}>
         <Slide >
         <div className="each-slide">
-        <img src={slide_1} style={{ height: '300px', borderRadius: '12px'}} />
+        <img src={slide_1} alt="slide 1" style={{ height: '300px', borderRadius: '12px'}} />
           </div>
           <div className="each-slide">
-          <img src={slide_2} style={{ height: '300px', borderRadius: '12px'}} />
-          </div>
-
-          <div className="each-slide">
-           <img src={slide_3} style={{ height: '300px', borderRadius: '12px'}} />
+          <img src={slide_2}  alt="slide 2" style={{ height: '300px', borderRadius: '12px'}} />
           </div>
 
           <div className="each-slide">
-           <img src={slide_4} style={{ height: '300px', borderRadius: '12px'}} />
+           <img src={slide_3} alt="slide 3"  style={{ height: '300px', borderRadius: '12px'}} />
           </div>
 
           <div className="each-slide">
-           <img src={slide_5} style={{ height: '300px', borderRadius: '12px'}} />
+           <img src={slide_4} alt="slide 4" style={{ height: '300px', borderRadius: '12px'}} />
+          </div>
+
+          <div className="each-slide">
+           <img src={slide_5} alt="slide 5" style={{ height: '300px', borderRadius: '12px'}} />
           </div>
         </Slide>
       </div>

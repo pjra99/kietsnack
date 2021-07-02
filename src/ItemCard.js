@@ -26,7 +26,7 @@ function ItemCard(props){
         return (
           
               <div className="col-md-3" style={spanStyle} >
-                  <img style={imgStyle} src={props.img} /> 
+                  <img style={imgStyle} src={props.img} alt="some food item" /> 
                   <p style={pStyle}>Maggie 
                       <ul>
                           <li> {props.name}</li>
@@ -74,7 +74,6 @@ class NumberOfItems extends React.Component {
 
 return (
    <span style={{
-    //    border: '1px solid black',
        color: 'b',
        borderRadius: '5px'
    }}> {this.state.total} Rs <button onClick={this.handleRemoveItem} style={{

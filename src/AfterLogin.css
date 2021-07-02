@@ -87,6 +87,9 @@ padding-left: 5%;
 .item-card-section > div {
     margin-left: 5%;
 }
+.canteen-cards {
+    padding-left: 3%;
+}
 .bottom-section-title {
     margin-top: 6%;
     font-family: 'Noto Sans TC';
@@ -114,4 +117,22 @@ padding-left: 5%;
     /* color:#153e90; */
     transition: .1s;
 }
-/* @media only screen and (max) */
+@media only screen and (min-width: 1347px){
+    .item-card-section {
+        padding-left: 11%;
+    }
+    .canteen-cards {
+        padding-left: 7%;
+    }
+}
+@media only screen and (max-width: 991px){
+    .item-card-section {
+        padding-left: 20%;
+    }
+    .canteen-cards {
+        padding-left: 15%;
+    }
+    .bottom-section-title {
+        margin-right: 10%;
+    }
+}

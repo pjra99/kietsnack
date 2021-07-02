@@ -49,22 +49,22 @@ fontFamily: 'Lato'
             <br />  
             <ul>
                 <li style={listStyle}>
-                    <img style = {imgStyle} 
+                    <img style = {imgStyle} alt="some img" 
                     src={history.location.state.img1} />
                     <p style={pStyle}>{history.location.state.item1} <p style={priceStyle}><NumberOfItems price={history.location.state.price1} /></p> </p>
                 </li>
-                <li style={listStyle}>
-                <img style = {imgStyle} 
+                <li style={listStyle}> 
+                <img style = {imgStyle} alt="some img" 
                     src={history.location.state.img2} />
                    <p style={pStyle}> {history.location.state.item2} <p style={priceStyle}><NumberOfItems price={history.location.state.price2} /></p> </p>
                 </li>
                 <li style={listStyle}>
-                <img style = {imgStyle} 
+                <img style = {imgStyle} alt="some img" 
                     src={history.location.state.img3} />
                    <p style={pStyle}> {history.location.state.item3} <p style={priceStyle}><NumberOfItems price={history.location.state.price3} /></p></p>
                 </li>
                 <li style={listStyle}>
-                <img style = {imgStyle} 
+                <img style = {imgStyle} alt="some img" 
                     src={history.location.state.img4} />
                    <p style={pStyle}>{history.location.state.item4} <p style={priceStyle}><NumberOfItems price={history.location.state.price4} /></p></p>
                 </li>

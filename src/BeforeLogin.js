@@ -5,15 +5,12 @@ import {BsFillPersonFill} from 'react-icons/bs'
 import {BsSearch} from 'react-icons/bs'
 import {FaHamburger} from 'react-icons/fa'
 import {FaUtensils} from 'react-icons/fa'
-import ReactDOM from "react-dom"
-import SignIn from "./SignIn.js"
 import Canteens from "./Canteens.js"
 import bigtreat from "./images/bigtreat.jpg"
 import cafeteria from "./images/cafeteria.jpg"
 import nishu from "./images/nishu.jpg"
 import heroes from "./images/heroes.jpg"
 import './BeforeLogin.css'
-import AdminSignIn from "./AdminSignIn.js"
 import {Link} from "react-router-dom"
 
 class BeforeLogin extends React.Component {
@@ -73,25 +70,26 @@ class BeforeLogin extends React.Component {
                         </Link>
                         </div> 
                         <div className="col-sm-3"></div>    
-
                         </div>
                 </div>
                 </div>
-                <div className="row bottom-upper">
-                    <h2 className="bottom-upper-phrase" > Order from any of your favourite spots around your college</h2>
+                <div className="row middle">
+                    <h2> Order from any of your favourite spots around your college</h2>
                     </div>
-                    <div className="row">
-                        <div className="col-md-1"></div>
-                   <div className="col-md-5 img1"><Canteens img={bigtreat} /></div> 
-                   <div className="col-md-6 img2"><Canteens img={cafeteria} /> </div> 
-                    </div>
-                    <div className="row" >
+                    <div className="row canteen-images">
                     <div className="col-md-1"></div>
-                        <div className="col-md-5 img3"> <Canteens img={heroes} /></div>
-                        <div className="col-md-6 img4"> <Canteens img={nishu} /> </div>
+                   <div className="col-md-5 img1"><Canteens img={bigtreat} /></div> 
+                   <div className="col-md-5 img2"><Canteens img={cafeteria} /> </div> 
+                   <div className="col-md-1"></div>
                     </div>
-                <div className="bottom-lower">
-                    <h4  className="bottom-lower-phrase">
+                    <div className="row canteen-images" >
+                        <div className="col-md-1"></div>
+                        <div className="col-md-5 img3"> <Canteens img={heroes} /></div>
+                        <div className="col-md-5 img4"> <Canteens img={nishu} /> </div>
+                        <div className="col-md-1"></div>
+                    </div>
+                <div className="row footer">
+                    <h4  className="footer-phrase">
                KIET FOODS | All Rights Reserved &copy;</h4>
                 </div>
             </div>

@@ -72,20 +72,34 @@
     box-shadow: 8px 10px 10px #f89d13;
     font-family: 'Lato';
 }
-.bottom-upper-phrase {
+   
+.middle > h2 {
     text-align: center;
     font-family: 'Vollkorn';
     padding: 1em;
 }
-.bottom-lower {
+
+.img1, .img2, .img3, .img4 {
+    display: flex;
+    justify-content: center;
+   }
+
+   .footer {
     height: 100px;
+    /* width: 100%; */
     background-color: #eeeeee;
 }
-.bottom-lower-phrase {
+.footer-phrase {
     padding-top: 40px;
     opacity: .8;
     text-align: center;
     background-color: #d1d9d9;
-    margin: 4% -2% 0% -2%;
-    padding-bottom: 2em;
+        padding-bottom: 2em;
+}
+
+@media only screen and (max-width: 991px){
+    .canteen-images > div {
+        width: 100%;
+        padding-right: 15%;
+     }
 }

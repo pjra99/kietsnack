@@ -6,8 +6,8 @@ class SignIn extends React.Component {
   render() {
 
       return (
-          <div>
-          <div className="header" style={{
+          <div className="container-fluid">
+          <div className="row header" style={{
             backgroundColor: 'rgb(255,196,60)',
             height: '100px',
             fontFamily: 'Vollkorn'
@@ -35,7 +35,7 @@ class SignIn extends React.Component {
                                   fontFamily: 'Nunito'
           }}> Go</button> </Link>
           </div>
-          <div className="main" style={{
+          <div className="main row" style={{
             margin:'15% 0% 0% 0%',
             fontFamily: 'Vollkorn',
             fontSize: '32px'
@@ -50,8 +50,8 @@ class SignIn extends React.Component {
 class EnterOTP extends React.Component {
   render() {
       return (
-          <div>
-          <div align='center' className="header" style={{
+          <div className="container-fluid">
+          <div align='center' className="row header" style={{
             backgroundColor: 'rgb(255,196,60)',
             height: '100px',
             fontFamily: 'Vollkorn'
@@ -80,7 +80,7 @@ class EnterOTP extends React.Component {
                                   fontFamily: 'Nunito',
           }}>Go</button></Link>
           </div>
-          <div className="main" style={{
+          <div className="row main" style={{
            margin:'15% 0% 0% 0%',
            fontSize: '32px',
            fontFamily: 'Vollkorn'
