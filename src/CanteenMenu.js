@@ -1,6 +1,7 @@
 import React from 'react'
 import {IoMdArrowRoundBack} from 'react-icons/io'
 import {Link, useHistory} from "react-router-dom"
+import './CanteenMenu.css'
 
 function CanteenMenu () {
     const history = useHistory();
@@ -29,11 +30,10 @@ fontFamily: 'Lato'
 }
     return (
         <div className="canteen-menu-screen container-fluid" style={{
-            height: '100vh',
             padding: '40px',
             backgroundColor: 'rgb(255,196,60)',
         }}>
-             <div className="canteen-menu-container container" style={{
+             <div className="canteen-menu-container" style={{
                  height: '100vh',
                  backgroundColor: 'white',
                  borderRadius: '5px'
@@ -51,22 +51,22 @@ fontFamily: 'Lato'
                 <li style={listStyle}>
                     <img style = {imgStyle} alt="some img" 
                     src={history.location.state.img1} />
-                    <p style={pStyle}>{history.location.state.item1} <p style={priceStyle}><NumberOfItems price={history.location.state.price1} /></p> </p>
+                    <div style={pStyle}>{history.location.state.item1} <div style={priceStyle}><NumberOfItems price={history.location.state.price1} /></div> </div>
                 </li>
                 <li style={listStyle}> 
                 <img style = {imgStyle} alt="some img" 
                     src={history.location.state.img2} />
-                   <p style={pStyle}> {history.location.state.item2} <p style={priceStyle}><NumberOfItems price={history.location.state.price2} /></p> </p>
+                   <div style={pStyle}> {history.location.state.item2} <div style={priceStyle}><NumberOfItems price={history.location.state.price2} /></div> </div>
                 </li>
                 <li style={listStyle}>
                 <img style = {imgStyle} alt="some img" 
                     src={history.location.state.img3} />
-                   <p style={pStyle}> {history.location.state.item3} <p style={priceStyle}><NumberOfItems price={history.location.state.price3} /></p></p>
+                   <div style={pStyle}> {history.location.state.item3} <div style={priceStyle}><NumberOfItems price={history.location.state.price3} /></div></div>
                 </li>
                 <li style={listStyle}>
                 <img style = {imgStyle} alt="some img" 
                     src={history.location.state.img4} />
-                   <p style={pStyle}>{history.location.state.item4} <p style={priceStyle}><NumberOfItems price={history.location.state.price4} /></p></p>
+                   <div style={pStyle}>{history.location.state.item4} <div style={priceStyle}><NumberOfItems price={history.location.state.price4} /></div></div>
                 </li>
             </ul>
         </div>
