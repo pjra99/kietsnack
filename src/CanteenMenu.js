@@ -33,10 +33,11 @@ fontFamily: 'Lato'
             padding: '40px',
             backgroundColor: 'rgb(255,196,60)',
         }}>
-             <div className="canteen-menu-container" style={{
-                 height: '100vh',
+             <div className="canteen-menu row" style={{
+                //  height: '100vh',
                  backgroundColor: 'white',
-                 borderRadius: '5px'
+                 borderRadius: '5px',
+                 paddingBottom: '5%'
              }}>
                  <Link to="/afterlogin">
                  <button style={{

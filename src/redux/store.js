@@ -1,7 +1,6 @@
 import {createStore} from 'redux'
-import rootReducer from './rootReducer.js'
-import {composeWithDevTools} from 'redux-devtools-extension'
+import shopReducer from './Shopping/shopping-reducer.js'
 
-const store = createStore(rootReducer, composeWithDevTools());
+const store = createStore(shopReducer);
 
 export default store;
