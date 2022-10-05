@@ -7,21 +7,25 @@
     font-size: 13px;
     font-family: 'Lato';
     color: #838383;
+    
 }
 .header-title > p {
     padding-top: 10px;
+    margin-left: 12rem;
 }
 .header-list {
+    padding-right: 14rem;
+}
+.header-list ul {
     display: flex;
-    float: right;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding-top: 1rem;
 }
-.header-list > ul {
-    padding-top: 20px;
-}
+
 .listItem {
         list-style: none;
-        float: right;
-        margin-right: 50px;
+        /* float: right; */
         font-family: 'Vollkorn';
         padding: 4px;
         border-radius: 2px;
@@ -55,7 +59,7 @@
 }
 
 .text-below-input{
-    margin: 15px 0px 0px 100px;
+    margin: 2rem 0rem 0rem 12rem;
     font-family: 'Lato';
     color: #838383;
     font-family: 'Nunito';
@@ -71,7 +75,7 @@
     margin-top: 10px;
 }
 .second-title {
-    margin: 30px 0px -60px 0px;
+    margin: 3rem 0rem -5rem 13rem;
     font-family: 'Noto Sans TC';
     color: #838383;
 }
@@ -88,7 +92,8 @@ padding-left: 5%;
     margin-left: 5%;
 }
 .canteen-cards {
-    padding-left: 3%;
+    display: flex;
+    justify-content: center;
 }
 .bottom-section-title {
     margin-top: 6%;
@@ -96,6 +101,7 @@ padding-left: 5%;
  color: #333333;
  opacity: .8;
  text-align: center;
+ 
 }
 .signIn:hover {
     font-size: 15px;
@@ -121,17 +127,13 @@ padding-left: 5%;
     .item-card-section {
         padding-left: 11%;
     }
-    .canteen-cards {
-        padding-left: 7%;
-    }
+   
 }
 @media only screen and (max-width: 991px){
     .item-card-section {
         padding-left: 20%;
     }
-    .canteen-cards {
-        padding-left: 15%;
-    }
+ 
     .bottom-section-title {
         margin-right: 10%;
     }

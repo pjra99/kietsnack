@@ -19,10 +19,6 @@ import patties from "./images/patties.jpg";
 import maggie from "./images/maggie.jpeg";
 import masaladosa from "./images/dosa2.jpeg";
 import { Link, useHistory } from "react-router-dom";
-import { connect } from "react-redux";
-import { addToCart } from "./redux/Shopping/shopping-actions";
-// import './redux/Shopping/shopping-reducer.js'
-import * as actionTypes from "./redux/Shopping/shopping-types";
 import { useState } from "react";
 
 function AfterLogin(props) {
@@ -79,7 +75,7 @@ function AfterLogin(props) {
                 <input
                   type="text"
                   className="input"
-                  placeholder="What would you like to eat?"
+                  placeholder="  What would you like to eat?"
                 />
                 <button className="search-button"> Go </button>
               </div>
@@ -94,9 +90,7 @@ function AfterLogin(props) {
               </div>
             </div>
             <div className="row">
-              <h2 align="center" className="second-title">
-                What is your mood Today?
-              </h2>
+              <h2 className="second-title">What is your mood Today?</h2>
               <CategoryBox />
             </div>
           </div>
@@ -108,13 +102,15 @@ function AfterLogin(props) {
               }}
             ></div>
             <div className="row left-col-row1">
-              <div className="col-md-6 img1">
+              <div className="col-md-2"></div>
+              <div className="col-md-4 img1">
                 {" "}
                 <img src={samosa} alt="some img" />{" "}
               </div>
-              <div className="col-md-6 img2">
+              <div className="col-md-4 img2">
                 <img src={dosa} alt="some img" />{" "}
               </div>
+              <div className="col-md-2"></div>
             </div>
             <div
               className="row left-col-row2"
@@ -123,13 +119,15 @@ function AfterLogin(props) {
               }}
             ></div>
             <div className="row left-col-row3">
-              <div className="col-md-6 img1">
+              <div className="col-md-2"></div>
+              <div className="col-md-4 img1">
                 {" "}
                 <img src={momos} alt="momos" />{" "}
               </div>
-              <div className="col-md-6 img2">
+              <div className="col-md-4 img2">
                 <img src={noodles} alt="noodles" />{" "}
               </div>
+              <div className="col-md-2"></div>
             </div>
           </div>
         </div>
@@ -143,130 +141,132 @@ function AfterLogin(props) {
             <ItemCard img={momos} name="Amul" />
             <ItemCard img={patties} name="Big Treat" />
           </div>
-          <div className="row canteen-cards">
-            <h2 className="bottom-section-title">
+          <div className="row canteen-cards-section">
+            <h2 className="bottom-section-title ">
               {" "}
               Order From your favourite Spots!
             </h2>
-            <div
-              onClick={() =>
-                history.push({
-                  pathname: "/canteenmenu",
-                  state: {
-                    name: "Cafeteria",
-                    item1: "Burger",
-                    item2: "Pasta",
-                    item3: "Oreo-Shake",
-                    item4: "Burger",
-                    img1: "https://i.pinimg.com/564x/02/d7/9c/02d79ce0a82b68847f819640b8d1226f.jpg",
-                    img2: "https://i.pinimg.com/564x/e9/f7/80/e9f780aa12026483a928455f68f3a0ef.jpg",
-                    img3: "https://i.pinimg.com/564x/4a/f8/ea/4af8ea98d663fe106cd64ca016b961b0.jpg",
-                    img4: "https://i.pinimg.com/564x/61/23/74/612374b37b28b6790d6fbcb2ab5e8f82.jpg",
-                    price1: 25,
-                    price2: 30,
-                    price3: 20,
-                    price4: 35,
-                  },
-                })
-              }
-            >
-              <CanteenCard img={heroes} canteen="Heroes" />
-            </div>
-            <div
-              onClick={() =>
-                history.push({
-                  pathname: "/canteenmenu",
-                  state: {
-                    name: "Cafeteria",
-                    item1: "Burger",
-                    item2: "Pasta",
-                    item3: "Oreo-Shake",
-                    item4: "Burger",
-                    img1: "https://i.pinimg.com/564x/02/d7/9c/02d79ce0a82b68847f819640b8d1226f.jpg",
-                    img2: "https://i.pinimg.com/564x/e9/f7/80/e9f780aa12026483a928455f68f3a0ef.jpg",
-                    img3: "https://i.pinimg.com/564x/4a/f8/ea/4af8ea98d663fe106cd64ca016b961b0.jpg",
-                    img4: "https://i.pinimg.com/564x/61/23/74/612374b37b28b6790d6fbcb2ab5e8f82.jpg",
-                    price1: 25,
-                    price2: 30,
-                    price3: 20,
-                    price4: 35,
-                  },
-                })
-              }
-            >
-              <CanteenCard img={nishu} canteen="Nishu's" />
-            </div>
-            <div
-              onClick={() =>
-                history.push({
-                  pathname: "/canteenmenu",
-                  state: {
-                    name: "Cafeteria",
-                    item1: "Burger",
-                    item2: "Pasta",
-                    item3: "Oreo-Shake",
-                    item4: "Burger",
-                    img1: "https://i.pinimg.com/564x/02/d7/9c/02d79ce0a82b68847f819640b8d1226f.jpg",
-                    img2: "https://i.pinimg.com/564x/e9/f7/80/e9f780aa12026483a928455f68f3a0ef.jpg",
-                    img3: "https://i.pinimg.com/564x/4a/f8/ea/4af8ea98d663fe106cd64ca016b961b0.jpg",
-                    img4: "https://i.pinimg.com/564x/61/23/74/612374b37b28b6790d6fbcb2ab5e8f82.jpg",
-                    price1: 25,
-                    price2: 30,
-                    price3: 20,
-                    price4: 35,
-                  },
-                })
-              }
-            >
-              <CanteenCard img={cafeteria} canteen="Cafeteria" />
-            </div>
-            <div
-              onClick={() =>
-                history.push({
-                  pathname: "/canteenmenu",
-                  state: {
-                    name: "Cafeteria",
-                    item1: "Burger",
-                    item2: "Pasta",
-                    item3: "Oreo-Shake",
-                    item4: "Burger",
-                    img1: "https://i.pinimg.com/564x/02/d7/9c/02d79ce0a82b68847f819640b8d1226f.jpg",
-                    img2: "https://i.pinimg.com/564x/e9/f7/80/e9f780aa12026483a928455f68f3a0ef.jpg",
-                    img3: "https://i.pinimg.com/564x/4a/f8/ea/4af8ea98d663fe106cd64ca016b961b0.jpg",
-                    img4: "https://i.pinimg.com/564x/61/23/74/612374b37b28b6790d6fbcb2ab5e8f82.jpg",
-                    price1: 25,
-                    price2: 30,
-                    price3: 20,
-                    price4: 35,
-                  },
-                })
-              }
-            >
-              <CanteenCard img={amul} canteen="Amul" />
-            </div>
-            <div
-              onClick={() =>
-                history.push({
-                  pathname: "/canteenmenu",
-                  state: {
-                    name: "Cafeteria",
-                    item1: "Burger",
-                    item2: "Pasta",
-                    item3: "Oreo-Shake",
-                    item4: "Burger",
-                    img1: "https://i.pinimg.com/564x/02/d7/9c/02d79ce0a82b68847f819640b8d1226f.jpg",
-                    img2: "https://i.pinimg.com/564x/e9/f7/80/e9f780aa12026483a928455f68f3a0ef.jpg",
-                    img3: "https://i.pinimg.com/564x/4a/f8/ea/4af8ea98d663fe106cd64ca016b961b0.jpg",
-                    img4: "https://i.pinimg.com/564x/61/23/74/612374b37b28b6790d6fbcb2ab5e8f82.jpg",
-                    price1: 25,
-                    price2: 30,
-                    price3: 20,
-                    price4: 35,
-                  },
-                })
-              }
-            >
-              <CanteenCard img={bigtreat} canteen="Big Treat" />
+            <div className="canteen-cards">
+              <div
+                onClick={() =>
+                  history.push({
+                    pathname: "/canteenmenu",
+                    state: {
+                      name: "Cafeteria",
+                      item1: "Burger",
+                      item2: "Pasta",
+                      item3: "Oreo-Shake",
+                      item4: "Burger",
+                      img1: "https://i.pinimg.com/564x/02/d7/9c/02d79ce0a82b68847f819640b8d1226f.jpg",
+                      img2: "https://i.pinimg.com/564x/e9/f7/80/e9f780aa12026483a928455f68f3a0ef.jpg",
+                      img3: "https://i.pinimg.com/564x/4a/f8/ea/4af8ea98d663fe106cd64ca016b961b0.jpg",
+                      img4: "https://i.pinimg.com/564x/61/23/74/612374b37b28b6790d6fbcb2ab5e8f82.jpg",
+                      price1: 25,
+                      price2: 30,
+                      price3: 20,
+                      price4: 35,
+                    },
+                  })
+                }
+              >
+                <CanteenCard img={heroes} canteen="Heroes" />
+              </div>
+              <div
+                onClick={() =>
+                  history.push({
+                    pathname: "/canteenmenu",
+                    state: {
+                      name: "Cafeteria",
+                      item1: "Burger",
+                      item2: "Pasta",
+                      item3: "Oreo-Shake",
+                      item4: "Burger",
+                      img1: "https://i.pinimg.com/564x/02/d7/9c/02d79ce0a82b68847f819640b8d1226f.jpg",
+                      img2: "https://i.pinimg.com/564x/e9/f7/80/e9f780aa12026483a928455f68f3a0ef.jpg",
+                      img3: "https://i.pinimg.com/564x/4a/f8/ea/4af8ea98d663fe106cd64ca016b961b0.jpg",
+                      img4: "https://i.pinimg.com/564x/61/23/74/612374b37b28b6790d6fbcb2ab5e8f82.jpg",
+                      price1: 25,
+                      price2: 30,
+                      price3: 20,
+                      price4: 35,
+                    },
+                  })
+                }
+              >
+                <CanteenCard img={nishu} canteen="Nishu's" />
+              </div>
+              <div
+                onClick={() =>
+                  history.push({
+                    pathname: "/canteenmenu",
+                    state: {
+                      name: "Cafeteria",
+                      item1: "Burger",
+                      item2: "Pasta",
+                      item3: "Oreo-Shake",
+                      item4: "Burger",
+                      img1: "https://i.pinimg.com/564x/02/d7/9c/02d79ce0a82b68847f819640b8d1226f.jpg",
+                      img2: "https://i.pinimg.com/564x/e9/f7/80/e9f780aa12026483a928455f68f3a0ef.jpg",
+                      img3: "https://i.pinimg.com/564x/4a/f8/ea/4af8ea98d663fe106cd64ca016b961b0.jpg",
+                      img4: "https://i.pinimg.com/564x/61/23/74/612374b37b28b6790d6fbcb2ab5e8f82.jpg",
+                      price1: 25,
+                      price2: 30,
+                      price3: 20,
+                      price4: 35,
+                    },
+                  })
+                }
+              >
+                <CanteenCard img={cafeteria} canteen="Cafeteria" />
+              </div>
+              <div
+                onClick={() =>
+                  history.push({
+                    pathname: "/canteenmenu",
+                    state: {
+                      name: "Cafeteria",
+                      item1: "Burger",
+                      item2: "Pasta",
+                      item3: "Oreo-Shake",
+                      item4: "Burger",
+                      img1: "https://i.pinimg.com/564x/02/d7/9c/02d79ce0a82b68847f819640b8d1226f.jpg",
+                      img2: "https://i.pinimg.com/564x/e9/f7/80/e9f780aa12026483a928455f68f3a0ef.jpg",
+                      img3: "https://i.pinimg.com/564x/4a/f8/ea/4af8ea98d663fe106cd64ca016b961b0.jpg",
+                      img4: "https://i.pinimg.com/564x/61/23/74/612374b37b28b6790d6fbcb2ab5e8f82.jpg",
+                      price1: 25,
+                      price2: 30,
+                      price3: 20,
+                      price4: 35,
+                    },
+                  })
+                }
+              >
+                <CanteenCard img={amul} canteen="Amul" />
+              </div>
+              <div
+                onClick={() =>
+                  history.push({
+                    pathname: "/canteenmenu",
+                    state: {
+                      name: "Cafeteria",
+                      item1: "Burger",
+                      item2: "Pasta",
+                      item3: "Oreo-Shake",
+                      item4: "Burger",
+                      img1: "https://i.pinimg.com/564x/02/d7/9c/02d79ce0a82b68847f819640b8d1226f.jpg",
+                      img2: "https://i.pinimg.com/564x/e9/f7/80/e9f780aa12026483a928455f68f3a0ef.jpg",
+                      img3: "https://i.pinimg.com/564x/4a/f8/ea/4af8ea98d663fe106cd64ca016b961b0.jpg",
+                      img4: "https://i.pinimg.com/564x/61/23/74/612374b37b28b6790d6fbcb2ab5e8f82.jpg",
+                      price1: 25,
+                      price2: 30,
+                      price3: 20,
+                      price4: 35,
+                    },
+                  })
+                }
+              >
+                <CanteenCard img={bigtreat} canteen="Big Treat" />
+              </div>
             </div>
           </div>
         </div>
@@ -294,7 +294,7 @@ function CategoryBox() {
     marginBottom: "-10px",
   };
   return (
-    <div className="categoryboxes" style={{ margin: "100px 0px 0px 0px" }}>
+    <div className="categoryboxes" style={{ margin: "100px 0px 0px 69px" }}>
       <span className="item" align="center" style={cellStyle}>
         <GiPizzaSlice size={42} />
         <p align="center" style={pStyle}>
@@ -329,8 +329,8 @@ function CanteenCard(props) {
     <div
       className="canteenCard"
       style={{
-        float: "left",
-        margin: "40px 0px 0px 30px",
+        // float: "left",
+        margin: "2rem",
         borderBottomLeftRadius: "10px",
         borderBottomRightRadius: "10px",
       }}
@@ -362,16 +362,4 @@ function CanteenCard(props) {
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    currentItem: state.currentItem,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    addToCart: (currentItem) => dispatch(addToCart(currentItem)),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(AfterLogin);
+export default AfterLogin;
