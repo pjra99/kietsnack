@@ -6,6 +6,7 @@ Not only in pandemic, It can also be used by the students to save their time rat
 ## Technologies Used -
 React.js, Redux
 
+
 ## Images
 
 ![](screenshots/Screenshot%20(724).png)
