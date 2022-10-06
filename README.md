@@ -4,7 +4,7 @@
 Not only in pandemic, It can also be used by the students to save their time rather than going out in the campus during the exams and order online. }
 
 ## Technologies Used -
-React.js, Redux
+React.js, Redux, Bootstrap
 
 
 ## Images
